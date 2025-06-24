@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смело за руль — автошкола</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0865bc 0%, #08b1ff 50%, #0efff9 100%);
+        }
+        .btn-gradient {
+            background: linear-gradient(90deg, #0865bc, #08b1ff);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(90deg, #0865bc, #0efff9);
+            transform: translateY(-2px);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #08b1ff, #0efff9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <img src="logo.svg" alt="Логотип Смело за руль" class="h-10 mr-2">
+                    <span class="text-2xl font-bold">Смело за руль</span>
+                </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition">Главная</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">О нас</a>
+                    <a href="#prices" class="text-gray-700 hover:text-blue-600 transition">Цены</a>
+                    <a href="#courses" class="text-gray-700 hover:text-blue-600 transition">Курсы</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-blue-600 transition">Отзывы</a>
+                    <a href="#app" class="text-gray-700 hover:text-blue-600 transition">Приложение</a>
+                    <a href="#contacts" class="text-gray-700 hover:text-blue-600 transition">Контакты</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 absolute left-0 right-0 shadow-lg">
+                <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Главная</a>
+                <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">О нас</a>
+                <a href="#prices" class="block py-2 text-gray-700 hover:text-blue-600">Цены</a>
+                <a href="#courses" class="block py-2 text-gray-700 hover:text-blue-600">Курсы</a>
+                <a href="#reviews" class="block py-2 text-gray-700 hover:text-blue-600">Отзывы</a>
+                <a href="#app" class="block py-2 text-gray-700 hover:text-blue-600">Приложение</a>
+                <a href="#contacts" class="block py-2 text-gray-700 hover:text-blue-600">Контакты</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-32 pb-20 gradient-bg text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Научись водить уверенно с автошколой <span class="text-yellow-300">"Смело за руль"</span></h1>
+                <p class="text-xl mb-8">Профессиональное обучение вождению категорий A, B, C. 95% наших учеников сдают экзамен с первого раза!</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#courses" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg text-center hover:bg-gray-100 transition">Выбрать курс</a>
+                    <a href="#contacts" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-white hover:text-blue-600 transition">Записаться</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Инструктор автошколы" class="rounded-xl shadow-2xl max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Почему выбирают нас</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition card-hover">
+                    <div class="text-4xl mb-4 text-blue-500"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Опытные инструкторы</h3>
+                    <p>Наши преподаватели - профессионалы с более чем 10-летним стажем. Они найдут индивидуальный подход к каждому ученику.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition card-hover">
+                    <div class="text-4xl mb-4 text-blue-500"><i class="fas fa-car-alt"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Современный автопарк</h3>
+                    <p>Обучение проходит на новых автомобилях с автоматической и механической коробкой передач, оборудованных дублирующими педалями.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md text-center hover:shadow-lg transition card-hover">
+                    <div class="text-4xl mb-4 text-blue-500"><i class="fas fa-percentage"></i></div>
+                    <h3 class="text-xl font-bold mb-2">95% успешной сдачи</h3>
+                    <p>Подавляющее большинство наших учеников сдают экзамен с первого раза благодаря эффективной методике обучения.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prices" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Наши цены</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover transition">
+                    <h3 class="text-2xl font-bold mb-4">Категория A</h3>
+                    <div class="text-4xl font-bold mb-4 text-gradient">18 000 ₽</div>
+                    <ul class="text-left mb-6">
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Теоретический курс</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 18 часов вождения</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Подготовка документов</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Сопровождение на экзамен</li>
+                    </ul>
+                    <a href="#contacts" class="btn-gradient text-white font-bold py-3 px-6 rounded-lg w-full block">Записаться</a>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-xl border-2 border-blue-500 text-center card-hover transition transform scale-105">
+                    <div class="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 rounded-bl-lg">Выбор большинства</div>
+                    <h3 class="text-2xl font-bold mb-4">Категория B</h3>
+                    <div class="text-4xl font-bold mb-4 text-gradient">28 500 ₽</div>
+                    <ul class="text-left mb-6">
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Теоретический курс</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 56 часов вождения</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Подготовка документов</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Сопровождение на экзамен</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Подарочный сертификат на ТО</li>
+                    </ul>
+                    <a href="#contacts" class="btn-gradient text-white font-bold py-3 px-6 rounded-lg w-full block">Записаться</a>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-center card-hover transition">
+                    <h3 class="text-2xl font-bold mb-4">Категория C</h3>
+                    <div class="text-4xl font-bold mb-4 text-gradient">34 000 ₽</div>
+                    <ul class="text-left mb-6">
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Теоретический курс</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> 42 часа вождения</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Подготовка документов</li>
+                        <li class="mb-2"><i class="fas fa-check text-green-500 mr-2"></i> Сопровождение на экзамен</li>
+                    </ul>
+                    <a href="#contacts" class="btn-gradient text-white font-bold py-3 px-6 rounded-lg w-full block">Записаться</a>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+                <p class="text-gray-600">* Возможна оплата в рассрочку без процентов на 3 месяца</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Наши курсы</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4 text-blue-500 mt-1"><i class="fas fa-book-open"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Теоретический курс</h3>
+                        <p class="text-gray-600">138 часов теории в современных классах или онлайн. Изучаем ПДД, основы устройства автомобиля, оказание первой помощи, психологию водителя.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4 text-blue-500 mt-1"><i class="fas fa-car-side"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Практическое вождение</h3>
+                        <p class="text-gray-600">Индивидуальные занятия с инструктором на автодроме и в городе. Разбираем все экзаменационные маршруты ГИБДД.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4 text-blue-500 mt-1"><i class="fas fa-user-shield"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Контраварийная подготовка</h3>
+                        <p class="text-gray-600">Специальный курс по управлению автомобилем в сложных условиях: гололед, дождь, экстренное торможение, занос.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4 text-blue-500 mt-1"><i class="fas fa-redo-alt"></i></div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Восстановление навыков</h3>
+                        <p class="text-gray-600">Для тех, кто давно не садился за руль или неуверенно чувствует себя на дороге. Индивидуальная программа.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-xl">
+                <div class="md:flex items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0"> <h3 class="text-2xl font-bold mb-2">Гибкий график обучения</h3>
+                        <p class="text-gray-600">Занимайтесь когда вам удобно: утром, днем, вечером или в выходные. Возможность переносить занятия без штрафа.</p>
+                    </div>
+                    <div class="md:w-1/2 grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-3xl text-blue-500 mb-2"><i class="fas fa-sun"></i></div>
+                            <p class="font-bold">Утро: 8:00-12:00</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-3xl text-blue-500 mb-2"><i class="fas fa-cloud-sun"></i></div>
+                            <p class="font-bold">День: 12:00-16:00</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-3xl text-blue-500 mb-2"><i class="fas fa-moon"></i></div>
+                            <p class="font-bold">Вечер: 16:00-22:00</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg text-center">
+                            <div class="text-3xl text-blue-500 mb-2"><i class="fas fa-calendar-week"></i></div>
+                            <p class="font-bold">Выходные</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Отзывы наших учеников</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="Anna.jpg" alt="Анна" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Анна К.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Никогда не думала, что смогу так уверенно чувствовать себя за рулем! Спасибо инструктору Михаилу за терпение и профессиональный подход. Сдала с первого раза!"</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="Dima.jpg" alt="Дмитрий" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Дмитрий С.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Выбрал эту автошколу по рекомендации и не пожалел. Автопарк современный, теория объясняется доступно. Особенно понравился подход к обучению - без нервотрепки."</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="Katya.jpg" alt="Екатерина" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Екатерина П.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"После неудачного опыта в другой автошколе пришла сюда. Разница огромная! Внимательные инструкторы, гибкий график. Теперь у меня есть права и нет страха перед дорогой."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="app" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">Наше приложение</h2>
+                    <p class="text-lg mb-6">Все материалы курса, тесты, расписание и связь с инструктором теперь в вашем телефоне! Учитесь в любое время и в любом месте.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#" id="download-android" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg flex items-center justify-center">
+                            <i class="fab fa-android text-2xl mr-2"></i> Скачать для Android
+                        </a>
+                        <a href="#" id="download-windows" class="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg flex items-center justify-center">
+                            <i class="fab fa-windows text-2xl mr-2"></i> Скачать для Windows
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3031/3031295.png" alt="Мобильное приложение" class="w-64 h-64 object-contain">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Контакты</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md border-2 border-blue-500">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                    <div class="bg-white p-4 rounded-lg text-center">
+                        <div class="text-3xl text-blue-500 mb-2"><i class="fas fa-phone-alt"></i></div>
+                        <p class="font-bold">Телефон:</p>
+                        <p class="text-gray-600">+7 (937) 283-72-85</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg text-center">
+                        <div class="text-3xl text-blue-500 mb-2"><i class="fas fa-envelope"></i></div>
+                        <p class="font-bold">Email:</p>
+                        <p class="text-gray-600">iusupov.insaf@gmail.com</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg text-center">
+                        <div class="text-3xl text-blue-500 mb-2"><i class="fas fa-clock"></i></div>
+                        <p class="font-bold">Режим работы:</p>
+                        <p class="text-gray-600">Пн-Пт: 9:00-21:00</p>
+                        <p class="text-gray-600">Сб-Вс: 10:00-18:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <h4 class="text-xl font-bold mb-2">Смело за руль</h4>
+            <p class="text-gray-400">© 2025 Автошкола "Смело за руль". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <div id="download-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-6 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-bold">Скачать приложение</h3>
+                <button id="close-modal" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <p class="mb-6" id="modal-text">Выберите вашу операционную систему для загрузки приложения:</p>
+            <div class="space-y-3">
+                <a href="#" id="modal-android" class="block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-4 rounded-lg text-center">
+                    <i class="fab fa-android mr-2"></i> Скачать для Android
+                </a>
+                <a href="#" id="modal-windows" class="block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg text-center">
+                    <i class="fab fa-windows mr-2"></i> Скачать для Windows
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    const downloadAndroid = document.getElementById('download-android');
+    const downloadWindows = document.getElementById('download-windows');
+    const modalAndroid = document.getElementById('modal-android');
+    const modalWindows = document.getElementById('modal-windows');
+    const modalText = document.getElementById('modal-text');
+    const downloadModal = document.getElementById('download-modal');
+    const closeModal = document.getElementById('close-modal');
+
+    downloadAndroid.addEventListener('click', (e) => {
+        e.preventDefault();
+        downloadModal.classList.remove('hidden');
+        modalText.textContent = "Скачать мобильное приложение для Android:";
+        modalAndroid.classList.remove('hidden');
+        modalWindows.classList.add('hidden');
+        modalAndroid.href = "setup.apk";
+        modalAndroid.download = "setup.apk"; 
+    });
+
+    downloadWindows.addEventListener('click', (e) => {
+        e.preventDefault();
+        downloadModal.classList.remove('hidden');
+        modalText.textContent = "Скачать приложение для Windows:";
+        modalWindows.classList.remove('hidden');
+        modalAndroid.classList.add('hidden');
+        modalWindows.href = "setup.exe";
+        modalWindows.download = "setup.exe";
+    });
+
+    closeModal.addEventListener('click', () => {
+        downloadModal.classList.add('hidden');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+
+            mobileMenu.classList.add('hidden');
+        });
+    });
+</script>
+</body>
+</html>
